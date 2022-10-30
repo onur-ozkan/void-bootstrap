@@ -31,64 +31,64 @@
       }
 
 - name: building & installing dwm-enhanced
-  register: dwm-enhanced-installation
+  register: dwmenhancedinstallation
   shell: cd /tmp/dwm-enhanced && make clean install
   when: sources is succeeded
 
 - name: removing dwm-enhanced source
   shell: rm -rf /tmp/dwm-enhanced
-  when: dwm-enhanced-installation is succeeded
+  when: dwmenhancedinstallation is succeeded
 
 - name: building & installing st-enhanced
-  register: st-enhanced-installation
+  register: stenhancedinstallation
   shell: cd /tmp/st-enhanced && make clean install
   when: sources is succeeded
 
 - name: removing st-enhanced source
   shell: rm -rf /tmp/st-enhanced
-  when: st-enhanced-installation is succeeded
+  when: stenhancedinstallation is succeeded
 
 - name: building & installing dmenu-enhanced
-  register: dmenu-enhanced-installation
+  register: dmenuenhancedinstallation
   shell: cd /tmp/dmenu-enhanced && make clean install
   when: sources is succeeded
 
 - name: removing dmenu-enhanced source
   shell: rm -rf /tmp/dmenu-enhanced
-  when: dmenu-enhanced-installation is succeeded
+  when: dmenuenhancedinstallation is succeeded
 
 - name: building & installing dwmblocks-enhanced
-  register: dwmblocks-enhanced-installation
+  register: dwmblocksenhancedinstallation
   shell: cd /tmp/dwmblocks-enhanced && make clean install
   when: sources is succeeded
 
 - name: removing dwmblocks-enhanced source
   shell: rm -rf /tmp/dwmblocks-enhanced
-  when: dwmblocks-enhanced-installation is succeeded
+  when: dwmblocksenhancedinstallation is succeeded
 
 - name: building & installing slock-enhanced
-  register: slock-enhanced-installation
+  register: slockenhancedinstallation
   shell: cd /tmp/slock-enhanced && make clean install
   when: sources is succeeded
 
 - name: removing slock-enhanced source
   shell: rm -rf /tmp/slock-enhanced
-  when: slock-enhanced-installation is succeeded
+  when: slockenhancedinstallation is succeeded
 
 - name: building & installing sbs
-  register: sbs-installation
+  register: sbsinstallation
   shell: cd /tmp/sbs && make clean install
   when: sources is succeeded
 
 - name: removing sbs source
   shell: rm -rf /tmp/sbs
-  when: sbs-installation is succeeded
+  when: sbsinstallation is succeeded
 
 - name: building & installing picom
-  register: picom-installation
+  register: picominstallation
   shell: cd /tmp/picom && git submodule update --init --recursive && meson --buildtype=release . build && ninja -C build && sudo ninja -C build install
   when: sources is succeeded
 
 - name: removing picom source
   shell: rm -rf /tmp/picom
-  when: picom-installation is succeeded
+  when: picominstallation is succeeded
