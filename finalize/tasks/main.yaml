@@ -11,3 +11,7 @@
 
 - name: pipewire configuration
   shell: cp /usr/share/pipewire/pipewire.conf /etc/pipewire/pipewire.conf
+
+- name: create custom xdg dir
+  become: no
+  shell: mkdir ~/.xdg-override
