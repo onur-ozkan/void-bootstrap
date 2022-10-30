@@ -21,3 +21,7 @@
 - name: create custom xdg dir
   become: no
   shell: mkdir ~/.xdg-override
+
+- name: create ~/.dircolors
+  become: no
+  shell: dircolors -p ~/.dircolors
