@@ -33,6 +33,7 @@
   loop:
     - dbus-devel
     - harfbuzz-devel
+    - imlib2-devel
     - libconfig-devel
     - libdrm-devel
     - libev
@@ -43,6 +44,7 @@
     - meson
     - pcre-devel
     - pixman-devel
+    - pkg-config
     - readline-devel
     - uthash
     - xcb-util-image-devel
@@ -65,11 +67,13 @@
     - flameshot
     - gcc
     - git
+    - htop
     - make
     - neovim
     - NetworkManager
     - opendoas
     - podman
+    - qutebrowser
     - ripgrep
     - setxkbmap
     - tmux

@@ -4,3 +4,4 @@
   roles:
     - xbps-packages
     - source-packages
+    - dotfiles
