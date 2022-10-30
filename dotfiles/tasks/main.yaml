@@ -5,6 +5,7 @@
     dest: /tmp/dotfiles
 
 - name: dotfiles installation
+  become: no
   register: dotfilesinstallation
   shell: cd /tmp/dotfiles && ./install
   when: dotfiles is succeeded
