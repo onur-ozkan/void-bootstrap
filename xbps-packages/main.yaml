@@ -1,0 +1,76 @@
+---
+- name: x packages
+  community.general.xbps:
+    name: '{{item}}'
+  loop:
+      - xorg-minimal
+      - libX11-devel 
+      - libXft-devel 
+      - libXinerama-devel 
+      - libXrandr-devel 
+      - libXi-devel 
+      - xclip 
+      - xdg-utils 
+      - xrandr 
+      - xset
+
+- name: audio packages 
+  community.general.xbps:
+    name: '{{item}}'
+  loop:
+      - pipewire
+
+- name: bluetooth packages 
+  community.general.xbps:
+    name: '{{item}}'
+  loop:
+      - bluez
+      - libspa-bluetooth
+
+- name: environment(mostly wm and compositor)/development dependencies 
+  community.general.xbps:
+    name: '{{item}}'
+  loop:
+      - dbus-devel
+      - libconfig-devel
+      - libdrm-devel
+      - libev-devel
+      - meson
+      - pcre-devel
+      - pixman-devel
+      - xcb-util-image-devel
+      - xcb-util-renderutil-devel
+      - readline-devel
+      - lzop
+      - harfbuzz-devel
+      - uthash
+      - libev
+      - mesa
+      - mesa-dri
+
+- name: laptop specific packages
+  community.general.xbps:
+    name: '{{item}}'
+  loop:
+      - tlp
+      - tlp-rdw
+      - brightnessctl
+
+- name: personal packages
+  community.general.xbps:
+    name: '{{item}}'
+  loop:
+      - tmux
+      - curl
+      - cmake
+      - flameshot
+      - zsh
+      - git
+      - make
+      - gcc
+      - valgrind
+      - neovim
+      - setxkbmap
+      - opendoas
+      - ripgrep
+      - NetworkManager
