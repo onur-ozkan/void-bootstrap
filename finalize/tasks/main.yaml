@@ -4,3 +4,6 @@
 - name: enable bluetooth service
   when: bluetooth|default(false)|bool
   shell: ln -s /etc/sv/bluetoothd /var/service
+
+- name: make zsh default
+  shell: chsh -s /usr/bin/zsh
