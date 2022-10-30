@@ -1,0 +1,94 @@
+- name: download source packages
+  register: sources
+  git:
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+  loop:
+    - {
+        repo: https://github.com/ozkanonur/dwm-enhanced,
+        dest: /tmp/dwm-enhanced,
+      }
+    - {
+        repo: https://github.com/ozkanonur/st-enhanced,
+        dest: /tmp/st-enhanced,
+      }
+    - {
+        repo: https://github.com/ozkanonur/dmenu-enhanced,
+        dest: /tmp/dmenu-enhanced,
+      }
+    - {
+        repo: https://github.com/ozkanonur/dwmblocks-enhanced,
+        dest: /tmp/dwmblocks-enhanced,
+      }
+    - {
+        repo: https://github.com/ozkanonur/slock-enhanced,
+        dest: /tmp/slock-enhanced,
+      }
+    - { repo: https://github.com/ozkanonur/sbs, dest: /tmp/sbs }
+    - {
+        repo: https://github.com/ibhagwan/picom,
+        dest: /tmp/picom,
+      }
+
+- name: building & installing dwm-enhanced
+  register: dwm-enhanced-installation
+  shell: cd /tmp/dwm-enhanced && make clean install
+  when: sources is succeeded
+
+- name: removing dwm-enhanced source
+  shell: rm -rf /tmp/dwm-enhanced
+  when: dwm-enhanced-installation is succeeded
+
+- name: building & installing st-enhanced
+  register: st-enhanced-installation
+  shell: cd /tmp/st-enhanced && make clean install
+  when: sources is succeeded
+
+- name: removing st-enhanced source
+  shell: rm -rf /tmp/st-enhanced
+  when: st-enhanced-installation is succeeded
+
+- name: building & installing dmenu-enhanced
+  register: dmenu-enhanced-installation
+  shell: cd /tmp/dmenu-enhanced && make clean install
+  when: sources is succeeded
+
+- name: removing dmenu-enhanced source
+  shell: rm -rf /tmp/dmenu-enhanced
+  when: dmenu-enhanced-installation is succeeded
+
+- name: building & installing dwmblocks-enhanced
+  register: dwmblocks-enhanced-installation
+  shell: cd /tmp/dwmblocks-enhanced && make clean install
+  when: sources is succeeded
+
+- name: removing dwmblocks-enhanced source
+  shell: rm -rf /tmp/dwmblocks-enhanced
+  when: dwmblocks-enhanced-installation is succeeded
+
+- name: building & installing slock-enhanced
+  register: slock-enhanced-installation
+  shell: cd /tmp/slock-enhanced && make clean install
+  when: sources is succeeded
+
+- name: removing slock-enhanced source
+  shell: rm -rf /tmp/slock-enhanced
+  when: slock-enhanced-installation is succeeded
+
+- name: building & installing sbs
+  register: sbs-installation
+  shell: cd /tmp/sbs && make clean install
+  when: sources is succeeded
+
+- name: removing sbs source
+  shell: rm -rf /tmp/sbs
+  when: sbs-installation is succeeded
+
+- name: building & installing picom
+  register: picom-installation
+  shell: cd /tmp/picom && git submodule update --init --recursive && meson --buildtype=release . build && ninja -C build && sudo ninja -C build install
+  when: sources is succeeded
+
+- name: removing picom source
+  shell: rm -rf /tmp/picom
+  when: picom-installation is succeeded

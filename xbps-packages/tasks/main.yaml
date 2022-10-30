@@ -1,76 +1,78 @@
 ---
 - name: x packages
   community.general.xbps:
-    name: '{{item}}'
+    name: "{{item}}"
   loop:
-      - xorg-minimal
-      - libX11-devel 
-      - libXft-devel 
-      - libXinerama-devel 
-      - libXrandr-devel 
-      - libXi-devel 
-      - xclip 
-      - xdg-utils 
-      - xrandr 
-      - xset
+    - libX11-devel
+    - libXft-devel
+    - libXi-devel
+    - libXinerama-devel
+    - libXrandr-devel
+    - xclip
+    - xdg-utils
+    - xorg-minimal
+    - xrandr
+    - xset
 
-- name: audio packages 
+- name: audio packages
   community.general.xbps:
-    name: '{{item}}'
+    name: "{{item}}"
   loop:
-      - pipewire
+    - pipewire
 
-- name: bluetooth packages 
+- name: bluetooth packages
   community.general.xbps:
-    name: '{{item}}'
+    name: "{{item}}"
   loop:
-      - bluez
-      - libspa-bluetooth
+    - bluez
+    - libspa-bluetooth
 
-- name: environment(mostly wm and compositor)/development dependencies 
+- name: environment(mostly wm and compositor)/development dependencies
   community.general.xbps:
-    name: '{{item}}'
+    name: "{{item}}"
   loop:
-      - dbus-devel
-      - libconfig-devel
-      - libdrm-devel
-      - libev-devel
-      - meson
-      - pcre-devel
-      - pixman-devel
-      - xcb-util-image-devel
-      - xcb-util-renderutil-devel
-      - readline-devel
-      - lzop
-      - harfbuzz-devel
-      - uthash
-      - libev
-      - mesa
-      - mesa-dri
+    - dbus-devel
+    - harfbuzz-devel
+    - libconfig-devel
+    - libdrm-devel
+    - libev
+    - libev-devel
+    - lzop
+    - mesa
+    - mesa-dri
+    - meson
+    - pcre-devel
+    - pixman-devel
+    - readline-devel
+    - uthash
+    - xcb-util-image-devel
+    - xcb-util-renderutil-devel
 
 - name: laptop specific packages
   community.general.xbps:
-    name: '{{item}}'
+    name: "{{item}}"
   loop:
-      - tlp
-      - tlp-rdw
-      - brightnessctl
+    - brightnessctl
+    - tlp
+    - tlp-rdw
 
 - name: personal packages
   community.general.xbps:
-    name: '{{item}}'
+    name: "{{item}}"
   loop:
-      - tmux
-      - curl
-      - cmake
-      - flameshot
-      - zsh
-      - git
-      - make
-      - gcc
-      - valgrind
-      - neovim
-      - setxkbmap
-      - opendoas
-      - ripgrep
-      - NetworkManager
+    - cmake
+    - curl
+    - flameshot
+    - gcc
+    - git
+    - make
+    - neovim
+    - NetworkManager
+    - opendoas
+    - podman
+    - ripgrep
+    - setxkbmap
+    - tmux
+    - valgrind
+    - zip
+    - zsh
