@@ -4,6 +4,6 @@ echo "installing xbps community module"
 ansible-galaxy collection install community.general
 
 echo "starting ansible tasks"
-ansible-playbook install.yml -K
+ansible-playbook bootstrap.yml -K
 
 echo "Process completed. Reboot your system."
