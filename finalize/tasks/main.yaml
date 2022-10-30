@@ -1,6 +1,12 @@
 - name: enable dbus service
   shell: ln -s /etc/sv/dbus /var/service
 
+- name: enable network manager
+  shell: ln -s /etc/sv/NetworkManager /var/service
+
+- name: disable dhcpcd
+  shell: rm /var/service/dhcpcd
+
 - name: enable bluetooth service
   when: bluetooth|default(false)|bool
   shell: ln -s /etc/sv/bluetoothd /var/service
