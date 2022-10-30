@@ -18,8 +18,8 @@
   community.general.xbps:
     name: "{{item}}"
   loop:
-    - pipewire
     - alsa-pipewire
+    - pipewire
 
 - name: bluetooth packages
   when: bluetooth|default(false)|bool
@@ -74,6 +74,7 @@
     - make
     - neovim
     - NetworkManager
+    - NoiseTorch
     - opendoas
     - podman
     - qutebrowser
