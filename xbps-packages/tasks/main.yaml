@@ -81,7 +81,9 @@
     - ripgrep
     - setxkbmap
     - tmux
+    - unzip
     - valgrind
+    - xtools
     - zip
     - zsh
     - zsh-autosuggestions
