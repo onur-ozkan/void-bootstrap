@@ -1,0 +1,6 @@
+- name: enable dbus service
+  shell: ln -s /etc/sv/dbus /var/service
+
+- name: enable bluetooth service
+  when: bluetooth|default(false)|bool
+  shell: ln -s /etc/sv/bluetoothd /var/service
