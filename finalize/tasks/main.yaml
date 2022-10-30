@@ -6,4 +6,8 @@
   shell: ln -s /etc/sv/bluetoothd /var/service
 
 - name: make zsh default
+  become: no
   shell: chsh -s /usr/bin/zsh
+
+- name: pipewire configuration
+  shell: cp /usr/share/pipewire/pipewire.conf /etc/pipewire/pipewire.conf

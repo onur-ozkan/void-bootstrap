@@ -19,6 +19,7 @@
     name: "{{item}}"
   loop:
     - pipewire
+    - alsa-pipewire
 
 - name: bluetooth packages
   when: bluetooth|default(false)|bool
