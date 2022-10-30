@@ -21,6 +21,7 @@
     - pipewire
 
 - name: bluetooth packages
+  when: bluetooth|default(false)|bool
   community.general.xbps:
     name: "{{item}}"
   loop:
@@ -51,6 +52,7 @@
     - xcb-util-renderutil-devel
 
 - name: laptop specific packages
+  when: laptop|default(false)|bool
   community.general.xbps:
     name: "{{item}}"
   loop:

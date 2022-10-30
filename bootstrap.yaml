@@ -1,6 +1,9 @@
 ---
 - hosts: all
   become: 'yes'
+  vars:
+    bluetooth: false
+    laptop: false
   roles:
     - xbps-packages
     - source-packages
