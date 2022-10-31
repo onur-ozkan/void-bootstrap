@@ -25,3 +25,6 @@
 - name: create ~/.dircolors
   become: no
   shell: dircolors -p ~/.dircolors
+
+- name: create symbolic link for docker
+  shell: ln -s $(which podman) /bin/docker
