@@ -10,6 +10,7 @@
     - libXrandr-devel
     - xclip
     - xdg-utils
+    - xorg-fonts
     - xorg-minimal
     - xrandr
     - xset
