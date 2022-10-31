@@ -87,6 +87,7 @@
     - tmux
     - unzip
     - valgrind
+    - void-repo-nonfree
     - xtools
     - zip
     - zsh
