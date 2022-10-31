@@ -82,6 +82,8 @@
     - qutebrowser
     - ripgrep
     - setxkbmap
+    - socklog
+    - socklog-void
     - tmux
     - unzip
     - valgrind
