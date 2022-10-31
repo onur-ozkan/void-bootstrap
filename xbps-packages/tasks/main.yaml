@@ -44,6 +44,7 @@
     - mesa
     - mesa-dri
     - meson
+    - openssl-devel
     - pcre-devel
     - pixman-devel
     - pkg-config
