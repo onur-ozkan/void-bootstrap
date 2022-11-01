@@ -67,6 +67,7 @@
   community.general.xbps:
     name: "{{item}}"
   loop:
+    - bc
     - cmake
     - curl
     - flameshot
