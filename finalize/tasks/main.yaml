@@ -21,8 +21,5 @@
   become: no
   shell: mkdir ~/.xdg-override
 
-- name: create ~/.dircolors
-  shell: dircolors -p > .dircolors
-
 - name: create symbolic link for docker
   shell: ln -s $(which podman) /bin/docker
