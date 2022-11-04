@@ -22,7 +22,7 @@
         dest: /tmp/slock-enhanced,
       }
     - { repo: https://github.com/ozkanonur/sbs, dest: /tmp/sbs }
-    - { repo: https://github.com/ibhagwan/picom, dest: /tmp/picom }
+    - { repo: https://github.com/ozkanonur-backups/picom, dest: /tmp/picom }
 
 - name: building & installing dwm-enhanced
   register: dwmenhancedinstallation
