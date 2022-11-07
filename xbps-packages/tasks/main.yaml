@@ -80,6 +80,7 @@
     - NoiseTorch
     - opendoas
     - podman
+    - qemu
     - qutebrowser
     - ripgrep
     - setxkbmap
