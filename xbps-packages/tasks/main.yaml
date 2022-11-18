@@ -77,7 +77,6 @@
     - make
     - neovim
     - NetworkManager
-    - NoiseTorch
     - opendoas
     - podman
     - qemu
