@@ -79,6 +79,7 @@
     - NetworkManager
     - opendoas
     - podman
+    - python3-adblock
     - qemu
     - qutebrowser
     - ripgrep
