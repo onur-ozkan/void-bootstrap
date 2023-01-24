@@ -90,6 +90,7 @@
     - unzip
     - valgrind
     - void-repo-nonfree
+    - wget
     - xtools
     - zip
     - zsh
