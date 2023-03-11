@@ -14,6 +14,9 @@
 - name: enable system logs
   shell: ln -s /etc/sv/socklog-unix /var/service && ln -s /etc/sv/nanoklogd /var/service
 
+- name: ensure /etc/pipewire dir
+  shell: mkdir -p /etc/pipewire
+
 - name: pipewire configuration
   shell: cp /usr/share/pipewire/pipewire.conf /etc/pipewire/pipewire.conf
 
