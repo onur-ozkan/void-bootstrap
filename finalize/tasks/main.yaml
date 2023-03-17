@@ -27,5 +27,5 @@
 - name: create symbolic link for docker
   shell: ln -s $(which podman) /bin/docker
 
-- name: remove sudo and related xbps config
-  shell: xbps-remove -R -y sudo && rm /etc/xbps.d/0-ignore.conf
+- name: bind acpi service
+  shell: ln -s /etc/sv/acpid /var/service
