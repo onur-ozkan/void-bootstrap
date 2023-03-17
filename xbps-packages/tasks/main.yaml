@@ -13,6 +13,7 @@
     - xorg-fonts
     - xorg-minimal
     - xrandr
+    - xrdb
     - xset
 
 - name: audio packages
@@ -68,6 +69,7 @@
     name: "{{item}}"
   loop:
     - bc
+    - chrony
     - cmake
     - curl
     - flameshot
@@ -79,6 +81,7 @@
     - NetworkManager
     - opendoas
     - podman
+    - powertop
     - python3-adblock
     - qemu
     - qutebrowser
