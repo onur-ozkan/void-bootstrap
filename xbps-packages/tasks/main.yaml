@@ -35,6 +35,7 @@
   community.general.xbps:
     name: "{{item}}"
   loop:
+    - acpi
     - dbus-devel
     - harfbuzz-devel
     - imlib2-devel
