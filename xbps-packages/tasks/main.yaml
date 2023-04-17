@@ -64,6 +64,7 @@
     - brightnessctl
     - tlp
     - tlp-rdw
+    - xinput # not really needed on desktop, mostly used for disabling touchpad or touchscreen
 
 - name: personal packages
   community.general.xbps:
