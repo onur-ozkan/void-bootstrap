@@ -22,6 +22,7 @@
   loop:
     - alsa-pipewire
     - pipewire
+    - wireplumber
 
 - name: bluetooth packages
   when: bluetooth|default(false)|bool
@@ -35,6 +36,7 @@
   community.general.xbps:
     name: "{{item}}"
   loop:
+    - acpi
     - dbus-devel
     - harfbuzz-devel
     - imlib2-devel
@@ -63,6 +65,7 @@
     - brightnessctl
     - tlp
     - tlp-rdw
+    - xinput # not really needed on desktop, mostly used for disabling touchpad or touchscreen
 
 - name: personal packages
   community.general.xbps:
