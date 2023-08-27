@@ -1,7 +1,7 @@
 - name: download dotfiles
   register: dotfiles
   git:
-    repo: https://github.com/ozkanonur/dotfiles
+    repo: https://github.com/onur-ozkan/dotfiles
     dest: /tmp/dotfiles
 
 - name: dotfiles installation

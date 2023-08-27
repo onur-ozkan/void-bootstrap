@@ -5,24 +5,24 @@
     dest: "{{ item.dest }}"
   loop:
     - {
-        repo: https://github.com/ozkanonur/dwm-enhanced,
+        repo: https://github.com/onur-ozkan/dwm-enhanced,
         dest: /tmp/dwm-enhanced,
       }
-    - { repo: https://github.com/ozkanonur/st-enhanced, dest: /tmp/st-enhanced }
+    - { repo: https://github.com/onur-ozkan/st-enhanced, dest: /tmp/st-enhanced }
     - {
-        repo: https://github.com/ozkanonur/dmenu-enhanced,
+        repo: https://github.com/onur-ozkan/dmenu-enhanced,
         dest: /tmp/dmenu-enhanced,
       }
     - {
-        repo: https://github.com/ozkanonur/dwmblocks-enhanced,
+        repo: https://github.com/onur-ozkan/dwmblocks-enhanced,
         dest: /tmp/dwmblocks-enhanced,
       }
     - {
-        repo: https://github.com/ozkanonur/slock-enhanced,
+        repo: https://github.com/onur-ozkan/slock-enhanced,
         dest: /tmp/slock-enhanced,
       }
-    - { repo: https://github.com/ozkanonur/sbs, dest: /tmp/sbs }
-    - { repo: https://github.com/ozkanonur-backups/picom, dest: /tmp/picom }
+    - { repo: https://github.com/onur-ozkan/sbs, dest: /tmp/sbs }
+    - { repo: https://github.com/onur-ozkan-backups/picom, dest: /tmp/picom }
 
 - name: building & installing dwm-enhanced
   register: dwmenhancedinstallation
