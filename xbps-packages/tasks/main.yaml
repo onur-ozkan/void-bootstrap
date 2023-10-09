@@ -66,6 +66,7 @@
     - tlp
     - tlp-rdw
     - xinput # not really needed on desktop, mostly used for disabling touchpad or touchscreen
+    - thermald
 
 - name: personal packages
   community.general.xbps:
