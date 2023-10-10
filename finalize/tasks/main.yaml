@@ -15,6 +15,10 @@
   when: laptop|default(false)|bool
   shell: ln -s /etc/sv/thermald /var/service
 
+- name: enable tlp service
+  when: laptop|default(false)|bool
+  shell: ln -s /etc/sv/tlp /var/service
+
 - name: enable system logs
   shell: ln -s /etc/sv/socklog-unix /var/service && ln -s /etc/sv/nanoklogd /var/service
 
@@ -31,5 +35,5 @@
 - name: create symbolic link for docker
   shell: ln -s $(which podman) /bin/docker
 
-- name: bind acpi service
+- name: enable acpi service
   shell: ln -s /etc/sv/acpid /var/service
