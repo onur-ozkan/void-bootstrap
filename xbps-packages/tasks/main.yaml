@@ -63,6 +63,7 @@
     name: "{{item}}"
   loop:
     - brightnessctl
+    - powertop
     - tlp
     - tlp-rdw
     - xinput # not really needed on desktop, mostly used for disabling touchpad or touchscreen
@@ -85,10 +86,7 @@
     - NetworkManager
     - opendoas
     - podman
-    - powertop
-    - python3-adblock
     - qemu
-    - qutebrowser
     - ripgrep
     - setxkbmap
     - socklog
