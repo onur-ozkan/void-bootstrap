@@ -77,12 +77,3 @@
 - name: removing sbs source
   shell: rm -rf /tmp/sbs
   when: sbsinstallation is succeeded
-
-- name: building & installing picom
-  register: picominstallation
-  shell: cd /tmp/picom && git submodule update --init --recursive && meson --buildtype=release . build && ninja -C build install
-  when: sources is succeeded
-
-- name: removing picom source
-  shell: rm -rf /tmp/picom
-  when: picominstallation is succeeded
