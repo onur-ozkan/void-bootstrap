@@ -15,10 +15,6 @@
   when: laptop|default(false)|bool
   shell: ln -s /etc/sv/thermald /var/service
 
-- name: enable tlp service
-  when: laptop|default(false)|bool
-  shell: ln -s /etc/sv/tlp /var/service
-
 - name: enable system logs
   shell: ln -s /etc/sv/socklog-unix /var/service && ln -s /etc/sv/nanoklogd /var/service
 
