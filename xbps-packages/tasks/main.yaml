@@ -64,8 +64,7 @@
   loop:
     - brightnessctl
     - powertop
-    - tlp
-    - tlp-rdw
+    - thermald
     - xinput # not really needed on desktop, mostly used for disabling touchpad or touchscreen
 
 - name: personal packages
