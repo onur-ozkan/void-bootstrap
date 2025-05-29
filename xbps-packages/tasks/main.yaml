@@ -8,6 +8,7 @@
     - libXi-devel
     - libXinerama-devel
     - libXrandr-devel
+    - inotify-tools
     - xclip
     - xdg-utils
     - xorg-fonts
